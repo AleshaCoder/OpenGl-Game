@@ -44,6 +44,14 @@ namespace Engine.Core
             SetupWindow();
         }
 
+        public static void DebugLog(string message, ConsoleColor consoleColor = ConsoleColor.White)
+        {
+            ConsoleColor temp = Console.ForegroundColor;
+            Console.ForegroundColor = consoleColor;
+            Console.WriteLine(message);
+            Console.ForegroundColor = temp;
+        }
+
         private void SetupWindow()
         {
             Window.Load += Start;
@@ -71,7 +79,6 @@ namespace Engine.Core
 
         private void Update(object sender, FrameEventArgs e)
         {
-            // Calculates fixed delta time
             Time.FixedDeltaTime = (float)e.Time;
             Game.FixedUpdate();
         }

@@ -12,8 +12,8 @@ namespace Engine.Components
         private const string Diffuse = "diffuse";
         private const string MVP = "MVP";
 
-        private Mesh _mesh;
-        private Material _material;
+        private readonly Mesh _mesh;
+        private readonly Material _material;
 
         public MeshRenderer(Mesh mesh, Material material)
         {

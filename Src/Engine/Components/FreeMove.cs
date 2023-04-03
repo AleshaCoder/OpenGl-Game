@@ -8,16 +8,6 @@ namespace Engine.Components
 {
     public class FreeMove : GameComponent
     {
-        public struct Direction
-        {
-            public const string Forward = "forward";
-            public const string Backward = "backward";
-            public const string Left = "left";
-            public const string Right = "right";
-            public const string Up = "up";
-            public const string Down = "down";
-        }
-
         private float _speed;
 
         private readonly Mapping _forwardMap;
@@ -44,6 +34,7 @@ namespace Engine.Components
             CoreEngine.Input.AddKeyMap(Direction.Right, Key.D);
             CoreEngine.Input.AddKeyMap(Direction.Up, Key.Space);
             CoreEngine.Input.AddKeyMap(Direction.Down, Key.LControl);
+
             _forwardMap = CoreEngine.Input.Mapping(Direction.Forward);
             _backwardMap = CoreEngine.Input.Mapping(Direction.Backward);
             _leftMap = CoreEngine.Input.Mapping(Direction.Left);
@@ -70,27 +61,27 @@ namespace Engine.Components
 
             if (_leftMap.Down)
                 _moveLeft = true;
-            
+
             if (_leftMap.Up)
                 _moveLeft = false;
-            
+
             if (_rightMap.Down)
                 _moveRight = true;
-            
+
             if (_rightMap.Up)
                 _moveRight = false;
-            
+
             if (_upMap.Down)
                 _moveUp = true;
-            
+
             if (_upMap.Up)
                 _moveUp = false;
-            
+
             if (_downMap.Down)
                 _moveDown = true;
-            
+
             if (_downMap.Up)
-                _moveDown = false;            
+                _moveDown = false;
 
             if (_moveForward)
                 Move(Transform.Forward, _speed);
@@ -103,15 +94,9 @@ namespace Engine.Components
 
             if (_moveRight)
                 Move(Transform.Right, _speed);
-
-            if (_moveUp)
-                Move(new Vector3(0, 1, 0), _speed);
-
-            if (_moveDown)
-                Move(new Vector3(0, 1, 0), -_speed);
         }
 
-        private void Move(Vector3 dir, float amt) 
+        private void Move(Vector3 dir, float amt)
             => Transform.Position = Vector3.Add(Transform.Position, dir * (amt * Time.DeltaTime));
     }
 }

@@ -7,7 +7,7 @@ namespace Game
         static void Main(string[] args)
         {
             MyGame game = new MyGame();
-            new CoreEngine(1280, 720, 4, game);
+            new CoreEngine(1000, 1000, 100, game);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Engine.Graphics
 
         public static void InitGL()
         {
-            GL.ClearColor(Color4.MidnightBlue);
+            GL.ClearColor(Color4.LightGreen);
 
             GL.FrontFace(FrontFaceDirection.Ccw);
             GL.CullFace(CullFaceMode.Back);

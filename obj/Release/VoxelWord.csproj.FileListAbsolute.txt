@@ -1,0 +1,13 @@
+I:\WaterWorld\bin\Release\Content\Shaders\basic.fs
+I:\WaterWorld\bin\Release\Content\Shaders\basic.vs
+I:\WaterWorld\bin\Release\VoxelWorld.exe.config
+I:\WaterWorld\bin\Release\VoxelWorld.exe
+I:\WaterWorld\bin\Release\VoxelWorld.pdb
+I:\WaterWorld\bin\Release\AssimpNet.pdb
+I:\WaterWorld\bin\Release\AssimpNet.xml
+I:\WaterWorld\bin\Release\OpenTK.xml
+I:\WaterWorld\obj\Release\VoxelWord.csproj.AssemblyReference.cache
+I:\WaterWorld\obj\Release\VoxelWord.csproj.CoreCompileInputs.cache
+I:\WaterWorld\obj\Release\VoxelWord.csproj.CopyComplete
+I:\WaterWorld\obj\Release\VoxelWorld.exe
+I:\WaterWorld\obj\Release\VoxelWorld.pdb
